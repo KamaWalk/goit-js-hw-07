@@ -22,29 +22,6 @@ const galleryList = galleryItems.map(
 
 myGallery.insertAdjacentHTML("afterbegin", galleryList);
 
-myGallery.addEventListener("click", (event) => {
-  event.preventDefault();
-});
-
-
-myGallery.addEventListener("click", (event) => {
-  if(event.target.tagName === 'IMG') {
-    const image = 
-    `<img
-      class="gallery__full_image"
-      src="${event.target.dataset.source}"
-    >`
-    const instance = basicLightbox.create(image);
-    instance.show();
-    const fullImage = document.querySelector(".gallery__full_image");
-    document.body.addEventListener("keydown", (e) => {
-      if (e.key === "Esc" || "Escape") instance.close()
-    });
-  console.log(fullImage);
-    console.log(event.target.dataset.source);
-    console.log(event.target);
-  }
-});
 
 var images = document.querySelectorAll(".gallery img");
 images.forEach(function (image) {
