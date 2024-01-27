@@ -24,12 +24,9 @@ const galleryList = galleryItems.map(
 
 myGallery.insertAdjacentHTML("afterbegin", galleryList);
 
+
 myGallery.addEventListener("click", (event) => {
   event.preventDefault();
-});
-
-
-myGallery.addEventListener("click", (event) => {
   if(event.target.tagName === 'IMG') {
     const image = 
     `<img
